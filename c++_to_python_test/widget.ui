@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1416</width>
+    <height>917</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLineEdit" name="webaddr">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>931</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0,0,103,33);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>310</y>
+     <width>691</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QPushButton" name="btn1">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>80</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn2">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>120</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn3">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>160</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn4">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>200</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn5">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>80</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F6</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn6">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>180</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>RETURN</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_1">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>80</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>120</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>160</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_4">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>200</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_5">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>80</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_6">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>120</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_7">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>160</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_8">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>200</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_9">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>80</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_10">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>120</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(166,166,126,37);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,222);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Segoe UI Variable Text&quot;;
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>A_L_LO</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>A_R_LO</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>B_L_LO</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>80</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>A_L_LA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>120</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>A_R_LA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>160</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>B_L_LA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>200</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>B_R_LA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>80</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>TIME_L</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>120</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>TIME_R</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>240</y>
+     <width>831</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit {
+    background-color:rgba(166,185,203,225);
+    border-color: rgba(0, 0, 0, 255);
+    color: rgba(0, 0, 0, 222);
+    border-style: none;
+    border-width: 8px;
+    border-radius: 14px;
+    font: 21px &quot;Segoe UI Variable Text&quot;;
+    text-align: center; /* 将内容居中对齐 */
+}
+
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>B_R_LO</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>RESULT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn7">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>120</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn8">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>160</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}
+</string>
+   </property>
+   <property name="text">
+    <string>F8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn0">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>200</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color:rgba(129,174,211,177);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+background-color:rgba(129,174,211,255);border-color:rgba(0,0,0,255);color: rgba(0, 0, 0,255);border-style:none;border-width:8px;border-radius:14px;font:21px &quot;MV Boli&quot;;}</string>
+   </property>
+   <property name="text">
+    <string>F9</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>30</y>
+     <width>451</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit {
+    background-color:rgba(166,166,126,37);
+    border-color: rgba(0, 0, 0, 255);
+    color: rgba(0, 0, 0, 222);
+    border-style: none;
+    border-width: 8px;
+    border-radius: 14px;
+    font: 21px &quot;Segoe UI Variable Text&quot;;
+    text-align: center; /* 将内容居中对齐 */
+}
+
+</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>671</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

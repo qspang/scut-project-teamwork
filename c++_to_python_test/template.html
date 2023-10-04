@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+		#allmap{height:500px;width:100%;}
+		#r-result{width:100%;}
+	</style>
+	<script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=KsZHq3ZZmk1Rvkxa61VHgBai8p4PwtY5"></script>
+	<title>add/delete</title>
+</head>
+<body>
+	<div id="allmap"></div>
+	<div id="r-result">
+		<input type="button" onclick="add_overlay();" value="add" />
+		<input type="button" onclick="remove_overlay();" value="delete" />
+	</div>
+</body>
+
+</html>
+<script type="text/javascript">
+	// GL版命名空间为BMapGL
+    // 按住鼠标右键，修改倾斜角和角度
+	var map = new BMapGL.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMapGL.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
+<script type="text/javascript">
+	var marker = new BMapGL.Marker(new BMapGL.Point(116.404, 39.915)); // 创建点
+	var polyline = new BMapGL.Polyline([
+		new BMapGL.Point({{lng1}}, {{lat1}}),
+		new BMapGL.Point({{lng2}}, {{lat2}}),
+		new BMapGL.Point({{lng3}}, {{lat3}}),
+		new BMapGL.Point({{lng4}}, {{lat4}}),
+	], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});   //创建折线
+
+	var pStart = new BMapGL.Point({{lng1}},{{lat1}});
+	var pEnd = new BMapGL.Point({{lng2}},{{lat2}});
+	var rectangle = new BMapGL.Polygon([
+		new BMapGL.Point(pStart.lng,pStart.lat),
+		new BMapGL.Point(pEnd.lng,pStart.lat),
+		new BMapGL.Point(pEnd.lng,pEnd.lat),
+		new BMapGL.Point(pStart.lng,pEnd.lat)
+	], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});  //创建矩形
+
+	//添加覆盖物
+	function add_overlay(){
+		map.addOverlay(marker);            //增加点
+		map.addOverlay(polyline);          //增加折线
+		map.addOverlay(rectangle);         //增加矩形
+	}
+	//清除覆盖物
+	function remove_overlay(){
+		map.clearOverlays();
+	}
+	add_overlay();
+</script>

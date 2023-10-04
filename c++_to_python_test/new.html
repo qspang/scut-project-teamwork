@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+		#allmap{height:500px;width:100%;}
+		#r-result{width:100%;}
+	</style>
+	<script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=KsZHq3ZZmk1Rvkxa61VHgBai8p4PwtY5"></script>
+	<title>add/delete</title>
+</head>
+<body>
+	<div id="allmap"></div>
+	<div id="r-result">
+		<input type="button" onclick="add_overlay();" value="add" />
+		<input type="button" onclick="remove_overlay();" value="delete" />
+	</div>
+</body>
+
+</html>
+<script type="text/javascript">
+	// GL版命名空间为BMapGL
+    // 按住鼠标右键，修改倾斜角和角度
+	var map = new BMapGL.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMapGL.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
+
+<script type="text/javascript">
+var rectangle0 = new BMapGL.Polygon([
+new BMapGL.Point(115.71275109944747,40.60754859722962),
+new BMapGL.Point(115.71275109944747,40.42726971363354),
+new BMapGL.Point(115.89261889191438,40.42726971363354),
+new BMapGL.Point(115.89261889191438,40.60754859722962),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle1 = new BMapGL.Polygon([
+new BMapGL.Point(115.8926407241985,40.60753765359054),
+new BMapGL.Point(115.8926407241985,40.42761711411893),
+new BMapGL.Point(116.07313690474452,40.42761711411893),
+new BMapGL.Point(116.07313690474452,40.60753765359054),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle2 = new BMapGL.Polygon([
+new BMapGL.Point(116.07315966570059,40.60788505514972),
+new BMapGL.Point(116.07315966570059,40.42737810972105),
+new BMapGL.Point(116.25308089966907,40.42737810972105),
+new BMapGL.Point(116.25308089966907,40.60788505514972),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle3 = new BMapGL.Polygon([
+new BMapGL.Point(116.25310313201544,40.60764607420915),
+new BMapGL.Point(116.25310313201544,40.42738785990632),
+new BMapGL.Point(116.43352044582252,40.42738785990632),
+new BMapGL.Point(116.43352044582252,40.60764607420915),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle4 = new BMapGL.Polygon([
+new BMapGL.Point(116.43354351340037,40.60765583850262),
+new BMapGL.Point(116.43354351340037,40.42683575620203),
+new BMapGL.Point(116.61331831233707,40.42683575620203),
+new BMapGL.Point(116.61331831233707,40.60765583850262),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle5 = new BMapGL.Polygon([
+new BMapGL.Point(116.61334052489028,40.60710378139196),
+new BMapGL.Point(116.61334052489028,40.426847018905505),
+new BMapGL.Point(116.79384580166726,40.426847018905505),
+new BMapGL.Point(116.79384580166726,40.60710378139196),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle6 = new BMapGL.Polygon([
+new BMapGL.Point(116.79386907337938,40.60711507353506),
+new BMapGL.Point(116.79386907337938,40.426685828155016),
+new BMapGL.Point(116.97403847762754,40.426685828155016),
+new BMapGL.Point(116.97403847762754,40.60711507353506),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle7 = new BMapGL.Polygon([
+new BMapGL.Point(116.97406186474284,40.6069539291049),
+new BMapGL.Point(116.97406186474284,40.426982095216054),
+new BMapGL.Point(117.15465497631743,40.426982095216054),
+new BMapGL.Point(117.15465497631743,40.6069539291049),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle8 = new BMapGL.Polygon([
+new BMapGL.Point(117.15467953548428,40.60725022911651),
+new BMapGL.Point(117.15467953548428,40.42705319142151),
+new BMapGL.Point(117.3347910628055,40.42705319142151),
+new BMapGL.Point(117.3347910628055,40.60725022911651),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle9 = new BMapGL.Polygon([
+new BMapGL.Point(117.33481545832794,40.60732136853025),
+new BMapGL.Point(117.33481545832794,40.427160130022095),
+new BMapGL.Point(117.51483455377466,40.427160130022095),
+new BMapGL.Point(117.51483455377466,40.60732136853025),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle10 = new BMapGL.Polygon([
+new BMapGL.Point(115.71272846533512,40.42728068051219),
+new BMapGL.Point(115.71272846533512,40.24703856107647),
+new BMapGL.Point(115.89259152370308,40.24703856107647),
+new BMapGL.Point(115.89259152370308,40.42728068051219),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle11 = new BMapGL.Polygon([
+new BMapGL.Point(115.89261889191438,40.42726971363354),
+new BMapGL.Point(115.89261889191438,40.2473859625496),
+new BMapGL.Point(116.07310861397328,40.2473859625496),
+new BMapGL.Point(116.07310861397328,40.42726971363354),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle12 = new BMapGL.Polygon([
+new BMapGL.Point(116.07313690474452,40.42761711411893),
+new BMapGL.Point(116.07313690474452,40.24714693759822),
+new BMapGL.Point(116.25305313104303,40.24714693759822),
+new BMapGL.Point(116.25305313104303,40.42761711411893),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle13 = new BMapGL.Polygon([
+new BMapGL.Point(116.25308089966907,40.42737810972105),
+new BMapGL.Point(116.25308089966907,40.247156676050146),
+new BMapGL.Point(116.43349184534895,40.247156676050146),
+new BMapGL.Point(116.43349184534895,40.42737810972105),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle14 = new BMapGL.Polygon([
+new BMapGL.Point(116.43352044582252,40.42738785990632),
+new BMapGL.Point(116.43352044582252,40.24660452912275),
+new BMapGL.Point(116.61329055693803,40.24660452912275),
+new BMapGL.Point(116.61329055693803,40.42738785990632),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle15 = new BMapGL.Polygon([
+new BMapGL.Point(116.61331831233707,40.42683575620203),
+new BMapGL.Point(116.61331831233707,40.24661576488131),
+new BMapGL.Point(116.7938169926642,40.24661576488131),
+new BMapGL.Point(116.7938169926642,40.42683575620203),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle16 = new BMapGL.Polygon([
+new BMapGL.Point(116.79384580166726,40.426847018905505),
+new BMapGL.Point(116.79384580166726,40.24645453078456),
+new BMapGL.Point(116.97400955251324,40.24645453078456),
+new BMapGL.Point(116.97400955251324,40.426847018905505),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle17 = new BMapGL.Polygon([
+new BMapGL.Point(116.97403847762754,40.426685828155016),
+new BMapGL.Point(116.97403847762754,40.24675076727259),
+new BMapGL.Point(117.15462488798656,40.24675076727259),
+new BMapGL.Point(117.15462488798656,40.426685828155016),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle18 = new BMapGL.Polygon([
+new BMapGL.Point(117.15465497631743,40.426982095216054),
+new BMapGL.Point(117.15465497631743,40.24682182315944),
+new BMapGL.Point(117.33476113761417,40.24682182315944),
+new BMapGL.Point(117.33476113761417,40.426982095216054),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle19 = new BMapGL.Polygon([
+new BMapGL.Point(117.3347910628055,40.42705319142151),
+new BMapGL.Point(117.3347910628055,40.24692872792198),
+new BMapGL.Point(117.51480506950581,40.24692872792198),
+new BMapGL.Point(117.51480506950581,40.42705319142151),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle20 = new BMapGL.Polygon([
+new BMapGL.Point(115.71270030147312,40.24704954831838),
+new BMapGL.Point(115.71270030147312,40.066835391915546),
+new BMapGL.Point(115.89256028230047,40.066835391915546),
+new BMapGL.Point(115.89256028230047,40.24704954831838),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle21 = new BMapGL.Polygon([
+new BMapGL.Point(115.89259152370308,40.24703856107647),
+new BMapGL.Point(115.89259152370308,40.06718279459649),
+new BMapGL.Point(116.07307645336431,40.06718279459649),
+new BMapGL.Point(116.07307645336431,40.24703856107647),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle22 = new BMapGL.Polygon([
+new BMapGL.Point(116.07310861397328,40.2473859625496),
+new BMapGL.Point(116.07310861397328,40.06694375162274),
+new BMapGL.Point(116.25302148778688,40.06694375162274),
+new BMapGL.Point(116.25302148778688,40.2473859625496),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle23 = new BMapGL.Polygon([
+new BMapGL.Point(116.25305313104303,40.24714693759822),
+new BMapGL.Point(116.25305313104303,40.06695347934522),
+new BMapGL.Point(116.43345937225544,40.06695347934522),
+new BMapGL.Point(116.43345937225544,40.24714693759822),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle24 = new BMapGL.Polygon([
+new BMapGL.Point(116.43349184534895,40.247156676050146),
+new BMapGL.Point(116.43349184534895,40.06640129283167),
+new BMapGL.Point(116.61325892255392,40.06640129283167),
+new BMapGL.Point(116.61325892255392,40.247156676050146),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle25 = new BMapGL.Polygon([
+new BMapGL.Point(116.61329055693803,40.24660452912275),
+new BMapGL.Point(116.61329055693803,40.06641250279837),
+new BMapGL.Point(116.79378430891035,40.06641250279837),
+new BMapGL.Point(116.79378430891035,40.24660452912275),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle26 = new BMapGL.Polygon([
+new BMapGL.Point(116.7938169926642,40.24661576488131),
+new BMapGL.Point(116.7938169926642,40.066251227775446),
+new BMapGL.Point(116.9739767530076,40.066251227775446),
+new BMapGL.Point(116.9739767530076,40.24661576488131),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle27 = new BMapGL.Polygon([
+new BMapGL.Point(116.97400955251324,40.24645453078456),
+new BMapGL.Point(116.97400955251324,40.06654743446062),
+new BMapGL.Point(117.154590931945,40.06654743446062),
+new BMapGL.Point(117.154590931945,40.24645453078456),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle28 = new BMapGL.Polygon([
+new BMapGL.Point(117.15462488798656,40.24675076727259),
+new BMapGL.Point(117.15462488798656,40.06661845229661),
+new BMapGL.Point(117.33472734506151,40.06661845229661),
+new BMapGL.Point(117.33472734506151,40.24675076727259),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle29 = new BMapGL.Polygon([
+new BMapGL.Point(117.33476113761417,40.24682182315944),
+new BMapGL.Point(117.33476113761417,40.06672532552095),
+new BMapGL.Point(117.51477171678958,40.06672532552095),
+new BMapGL.Point(117.51477171678958,40.24682182315944),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle30 = new BMapGL.Polygon([
+new BMapGL.Point(115.71266826909518,40.06684639708081),
+new BMapGL.Point(115.71266826909518,39.88664362397196),
+new BMapGL.Point(115.89252809419773,39.88664362397196),
+new BMapGL.Point(115.89252809419773,40.06684639708081),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle31 = new BMapGL.Polygon([
+new BMapGL.Point(115.89256028230047,40.066835391915546),
+new BMapGL.Point(115.89256028230047,39.886991026146774),
+new BMapGL.Point(116.0730433482456,39.886991026146774),
+new BMapGL.Point(116.0730433482456,40.066835391915546),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle32 = new BMapGL.Polygon([
+new BMapGL.Point(116.07307645336431,40.06718279459649),
+new BMapGL.Point(116.07307645336431,39.88675196649548),
+new BMapGL.Point(116.25298889647374,39.88675196649548),
+new BMapGL.Point(116.25298889647374,40.06718279459649),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle33 = new BMapGL.Polygon([
+new BMapGL.Point(116.25302148778688,40.06694375162274),
+new BMapGL.Point(116.25302148778688,39.886761682798856),
+new BMapGL.Point(116.43342595268105,39.886761682798856),
+new BMapGL.Point(116.43342595268105,40.06694375162274),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle34 = new BMapGL.Polygon([
+new BMapGL.Point(116.43345937225544,40.06695347934522),
+new BMapGL.Point(116.43345937225544,39.88620945947711),
+new BMapGL.Point(116.61322633759197,39.88620945947711),
+new BMapGL.Point(116.61322633759197,40.06695347934522),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle35 = new BMapGL.Polygon([
+new BMapGL.Point(116.61325892255392,40.06640129283167),
+new BMapGL.Point(116.61325892255392,39.886220643130784),
+new BMapGL.Point(116.79375067839646,39.886220643130784),
+new BMapGL.Point(116.79375067839646,40.06640129283167),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle36 = new BMapGL.Polygon([
+new BMapGL.Point(116.79378430891035,40.06641250279837),
+new BMapGL.Point(116.79378430891035,39.886059328331825),
+new BMapGL.Point(116.97394300799448,39.886059328331825),
+new BMapGL.Point(116.97394300799448,40.06641250279837),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle37 = new BMapGL.Polygon([
+new BMapGL.Point(116.9739767530076,40.066251227775446),
+new BMapGL.Point(116.9739767530076,39.8863555041828),
+new BMapGL.Point(117.15455603621697,39.8863555041828),
+new BMapGL.Point(117.15455603621697,40.066251227775446),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle38 = new BMapGL.Polygon([
+new BMapGL.Point(117.154590931945,40.06654743446062),
+new BMapGL.Point(117.154590931945,39.88642648494017),
+new BMapGL.Point(117.33469261396814,39.88642648494017),
+new BMapGL.Point(117.33469261396814,40.06654743446062),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle39 = new BMapGL.Polygon([
+new BMapGL.Point(117.33472734506151,40.06661845229661),
+new BMapGL.Point(117.33472734506151,39.886533327668616),
+new BMapGL.Point(117.51473742536577,39.886533327668616),
+new BMapGL.Point(117.51473742536577,40.06661845229661),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle40 = new BMapGL.Polygon([
+new BMapGL.Point(115.71263529351612,39.886654645841006),
+new BMapGL.Point(115.71263529351612,39.70644435723833),
+new BMapGL.Point(115.89249823797054,39.70644435723833),
+new BMapGL.Point(115.89249823797054,39.886654645841006),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle41 = new BMapGL.Polygon([
+new BMapGL.Point(115.89252809419773,39.88664362397196),
+new BMapGL.Point(115.89252809419773,39.70679175576641),
+new BMapGL.Point(116.07301257795727,39.70679175576641),
+new BMapGL.Point(116.07301257795727,39.88664362397196),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle42 = new BMapGL.Polygon([
+new BMapGL.Point(116.0730433482456,39.886991026146774),
+new BMapGL.Point(116.0730433482456,39.70655267915724),
+new BMapGL.Point(116.25295863689136,39.70655267915724),
+new BMapGL.Point(116.25295863689136,39.886991026146774),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle43 = new BMapGL.Polygon([
+new BMapGL.Point(116.25298889647374,39.88675196649548),
+new BMapGL.Point(116.25298889647374,39.70656238186307),
+new BMapGL.Point(116.43339486703634,39.70656238186307),
+new BMapGL.Point(116.43339486703634,39.88675196649548),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle44 = new BMapGL.Polygon([
+new BMapGL.Point(116.43342595268105,39.886761682798856),
+new BMapGL.Point(116.43342595268105,39.70601012280237),
+new BMapGL.Point(116.6131960827393,39.70601012280237),
+new BMapGL.Point(116.6131960827393,39.886761682798856),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle45 = new BMapGL.Polygon([
+new BMapGL.Point(116.61322633759197,39.88620945947711),
+new BMapGL.Point(116.61322633759197,39.7060212781361),
+new BMapGL.Point(116.79371938240249,39.7060212781361),
+new BMapGL.Point(116.79371938240249,39.88620945947711),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle46 = new BMapGL.Polygon([
+new BMapGL.Point(116.79375067839646,39.886220643130784),
+new BMapGL.Point(116.79375067839646,39.705859923124336),
+new BMapGL.Point(116.97391159919212,39.705859923124336),
+new BMapGL.Point(116.97391159919212,39.886220643130784),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle47 = new BMapGL.Polygon([
+new BMapGL.Point(116.97394300799448,39.886059328331825),
+new BMapGL.Point(116.97394300799448,39.706156065673305),
+new BMapGL.Point(117.15452348318676,39.706156065673305),
+new BMapGL.Point(117.15452348318676,39.886059328331825),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle48 = new BMapGL.Polygon([
+new BMapGL.Point(117.15455603621697,39.8863555041828),
+new BMapGL.Point(117.15455603621697,39.706227008761985),
+new BMapGL.Point(117.33466022720562,39.706227008761985),
+new BMapGL.Point(117.33466022720562,39.8863555041828),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle49 = new BMapGL.Polygon([
+new BMapGL.Point(117.33469261396814,39.88642648494017),
+new BMapGL.Point(117.33469261396814,39.706333820472516),
+new BMapGL.Point(117.51470547859735,39.706333820472516),
+new BMapGL.Point(117.51470547859735,39.88642648494017),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle50 = new BMapGL.Polygon([
+new BMapGL.Point(115.7126046528121,39.706455396210906),
+new BMapGL.Point(115.7126046528121,39.52622249267189),
+new BMapGL.Point(115.89247332346866,39.52622249267189),
+new BMapGL.Point(115.89247332346866,39.706455396210906),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle51 = new BMapGL.Polygon([
+new BMapGL.Point(115.89249823797054,39.70644435723833),
+new BMapGL.Point(115.89249823797054,39.526569883931856),
+new BMapGL.Point(116.07298675477881,39.526569883931856),
+new BMapGL.Point(116.07298675477881,39.70644435723833),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle52 = new BMapGL.Polygon([
+new BMapGL.Point(116.07301257795727,39.70679175576641),
+new BMapGL.Point(116.07301257795727,39.52633078852822),
+new BMapGL.Point(116.25293332084833,39.52633078852822),
+new BMapGL.Point(116.25293332084833,39.70679175576641),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle53 = new BMapGL.Polygon([
+new BMapGL.Point(116.25295863689136,39.70655267915724),
+new BMapGL.Point(116.25295863689136,39.52634047463417),
+new BMapGL.Point(116.4333687286013,39.52634047463417),
+new BMapGL.Point(116.4333687286013,39.70655267915724),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle54 = new BMapGL.Polygon([
+new BMapGL.Point(116.43339486703634,39.70656238186307),
+new BMapGL.Point(116.43339486703634,39.52578817888207),
+new BMapGL.Point(116.61317076950601,39.52578817888207),
+new BMapGL.Point(116.61317076950601,39.70656238186307),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle55 = new BMapGL.Polygon([
+new BMapGL.Point(116.6131960827393,39.70601012280237),
+new BMapGL.Point(116.6131960827393,39.52579930305064),
+new BMapGL.Point(116.7936930338351,39.52579930305064),
+new BMapGL.Point(116.7936930338351,39.70601012280237),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle56 = new BMapGL.Polygon([
+new BMapGL.Point(116.79371938240249,39.7060212781361),
+new BMapGL.Point(116.79371938240249,39.5256379059798),
+new BMapGL.Point(116.97388513935489,39.5256379059798),
+new BMapGL.Point(116.97388513935489,39.7060212781361),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle57 = new BMapGL.Polygon([
+new BMapGL.Point(116.97391159919212,39.705859923124336),
+new BMapGL.Point(116.97391159919212,39.525934012129504),
+new BMapGL.Point(117.15449588756077,39.525934012129504),
+new BMapGL.Point(117.15449588756077,39.705859923124336),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle58 = new BMapGL.Polygon([
+new BMapGL.Point(117.15452348318676,39.706156065673305),
+new BMapGL.Point(117.15452348318676,39.526004915616554),
+new BMapGL.Point(117.33463279950548,39.526004915616554),
+new BMapGL.Point(117.33463279950548,39.706156065673305),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle59 = new BMapGL.Polygon([
+new BMapGL.Point(117.33466022720562,39.706227008761985),
+new BMapGL.Point(117.33466022720562,39.52611169440355),
+new BMapGL.Point(117.51467849113045,39.52611169440355),
+new BMapGL.Point(117.51467849113045,39.706227008761985),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle60 = new BMapGL.Polygon([
+new BMapGL.Point(115.71257895714905,39.52623355066027),
+new BMapGL.Point(115.71257895714905,39.34597159173896),
+new BMapGL.Point(115.89245447654044,39.34597159173896),
+new BMapGL.Point(115.89245447654044,39.52623355066027),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle61 = new BMapGL.Polygon([
+new BMapGL.Point(115.89247332346866,39.52622249267189),
+new BMapGL.Point(115.89247332346866,39.346318972718365),
+new BMapGL.Point(116.07296700787613,39.346318972718365),
+new BMapGL.Point(116.07296700787613,39.52622249267189),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle62 = new BMapGL.Polygon([
+new BMapGL.Point(116.07298675477881,39.526569883931856),
+new BMapGL.Point(116.07298675477881,39.346079855680195),
+new BMapGL.Point(116.25291407628734,39.346079855680195),
+new BMapGL.Point(116.25291407628734,39.526569883931856),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle63 = new BMapGL.Polygon([
+new BMapGL.Point(116.25293332084833,39.52633078852822),
+new BMapGL.Point(116.25293332084833,39.34608952227701),
+new BMapGL.Point(116.4333486671691,39.34608952227701),
+new BMapGL.Point(116.4333486671691,39.52633078852822),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle64 = new BMapGL.Polygon([
+new BMapGL.Point(116.4333687286013,39.52634047463417),
+new BMapGL.Point(116.4333687286013,39.34553718717714),
+new BMapGL.Point(116.61315152445135,39.34553718717714),
+new BMapGL.Point(116.61315152445135,39.52634047463417),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle65 = new BMapGL.Polygon([
+new BMapGL.Point(116.61317076950601,39.52578817888207),
+new BMapGL.Point(116.61317076950601,39.34554827740071),
+new BMapGL.Point(116.79367276100112,39.34554827740071),
+new BMapGL.Point(116.79367276100112,39.52578817888207),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle66 = new BMapGL.Polygon([
+new BMapGL.Point(116.7936930338351,39.52579930305064),
+new BMapGL.Point(116.7936930338351,39.34538683562922),
+new BMapGL.Point(116.973864756096,39.34538683562922),
+new BMapGL.Point(116.973864756096,39.52579930305064),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle67 = new BMapGL.Polygon([
+new BMapGL.Point(116.97388513935489,39.5256379059798),
+new BMapGL.Point(116.97388513935489,39.345682902650076),
+new BMapGL.Point(117.15447437955352,39.345682902650076),
+new BMapGL.Point(117.15447437955352,39.5256379059798),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle68 = new BMapGL.Polygon([
+new BMapGL.Point(117.15449588756077,39.525934012129504),
+new BMapGL.Point(117.15449588756077,39.34575376389523),
+new BMapGL.Point(117.3346114606385,39.34575376389523),
+new BMapGL.Point(117.3346114606385,39.525934012129504),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle69 = new BMapGL.Polygon([
+new BMapGL.Point(117.33463279950548,39.526004915616554),
+new BMapGL.Point(117.33463279950548,39.34586050707903),
+new BMapGL.Point(117.51465759210578,39.34586050707903),
+new BMapGL.Point(117.51465759210578,39.526004915616554),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle70 = new BMapGL.Polygon([
+new BMapGL.Point(115.71255933339049,39.34598267159122),
+new BMapGL.Point(115.71255933339049,39.165695954681645),
+new BMapGL.Point(115.8924409829734,39.165695954681645),
+new BMapGL.Point(115.8924409829734,39.34598267159122),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle71 = new BMapGL.Polygon([
+new BMapGL.Point(115.89245447654044,39.34597159173896),
+new BMapGL.Point(115.89245447654044,39.16604332387199),
+new BMapGL.Point(116.07295262618746,39.16604332387199),
+new BMapGL.Point(116.07295262618746,39.34597159173896),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle72 = new BMapGL.Polygon([
+new BMapGL.Point(116.07296700787613,39.346318972718365),
+new BMapGL.Point(116.07296700787613,39.16580418221883),
+new BMapGL.Point(116.25290019057361,39.16580418221883),
+new BMapGL.Point(116.25290019057361,39.346318972718365),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle73 = new BMapGL.Polygon([
+new BMapGL.Point(116.25291407628734,39.346079855680195),
+new BMapGL.Point(116.25291407628734,39.16581382737417),
+new BMapGL.Point(116.43333397174668,39.16581382737417),
+new BMapGL.Point(116.43333397174668,39.346079855680195),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle74 = new BMapGL.Polygon([
+new BMapGL.Point(116.4333486671691,39.34608952227701),
+new BMapGL.Point(116.4333486671691,39.16526144941329),
+new BMapGL.Point(116.61313763292611,39.16526144941329),
+new BMapGL.Point(116.61313763292611,39.34608952227701),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle75 = new BMapGL.Polygon([
+new BMapGL.Point(116.61315152445135,39.34553718717714),
+new BMapGL.Point(116.61315152445135,39.16527250385626),
+new BMapGL.Point(116.79365785078772,39.16527250385626),
+new BMapGL.Point(116.79365785078772,39.34553718717714),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle76 = new BMapGL.Polygon([
+new BMapGL.Point(116.79367276100112,39.34554827740071),
+new BMapGL.Point(116.79367276100112,39.165111014806016),
+new BMapGL.Point(116.97384973528746,39.165111014806016),
+new BMapGL.Point(116.97384973528746,39.34554827740071),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle77 = new BMapGL.Polygon([
+new BMapGL.Point(116.973864756096,39.34538683562922),
+new BMapGL.Point(116.973864756096,39.16540704121338),
+new BMapGL.Point(117.1544582474487,39.16540704121338),
+new BMapGL.Point(117.1544582474487,39.34538683562922),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle78 = new BMapGL.Polygon([
+new BMapGL.Point(117.15447437955352,39.345682902650076),
+new BMapGL.Point(117.15447437955352,39.16547785772134),
+new BMapGL.Point(117.33459549811604,39.16547785772134),
+new BMapGL.Point(117.33459549811604,39.345682902650076),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle79 = new BMapGL.Polygon([
+new BMapGL.Point(117.3346114606385,39.34575376389523),
+new BMapGL.Point(117.3346114606385,39.16558456269614),
+new BMapGL.Point(117.5146420680639,39.16558456269614),
+new BMapGL.Point(117.5146420680639,39.34575376389523),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle80 = new BMapGL.Polygon([
+new BMapGL.Point(115.712545068702,39.165707059315814),
+new BMapGL.Point(115.712545068702,38.98540926679563),
+new BMapGL.Point(115.89243050632578,38.98540926679563),
+new BMapGL.Point(115.89243050632578,39.165707059315814),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle81 = new BMapGL.Polygon([
+new BMapGL.Point(115.8924409829734,39.165695954681645),
+new BMapGL.Point(115.8924409829734,38.98575662461481),
+new BMapGL.Point(116.0729412752473,38.98575662461481),
+new BMapGL.Point(116.0729412752473,39.165695954681645),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle82 = new BMapGL.Polygon([
+new BMapGL.Point(116.07295262618746,39.16604332387199),
+new BMapGL.Point(116.07295262618746,38.98551745612915),
+new BMapGL.Point(116.25288932783282,38.98551745612915),
+new BMapGL.Point(116.25288932783282,39.16604332387199),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle83 = new BMapGL.Polygon([
+new BMapGL.Point(116.25290019057361,39.16580418221883),
+new BMapGL.Point(116.25290019057361,38.98552707946293),
+new BMapGL.Point(116.43332230736776,38.98552707946293),
+new BMapGL.Point(116.43332230736776,39.16580418221883),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle84 = new BMapGL.Polygon([
+new BMapGL.Point(116.43333397174668,39.16581382737417),
+new BMapGL.Point(116.43333397174668,38.98497465538143),
+new BMapGL.Point(116.6131267570642,38.98497465538143),
+new BMapGL.Point(116.6131267570642,39.16581382737417),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle85 = new BMapGL.Polygon([
+new BMapGL.Point(116.61313763292611,39.16526144941329),
+new BMapGL.Point(116.61313763292611,38.98498567373262),
+new BMapGL.Point(116.79364596615589,38.98498567373262),
+new BMapGL.Point(116.79364596615589,39.16526144941329),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle86 = new BMapGL.Polygon([
+new BMapGL.Point(116.79365785078772,39.16527250385626),
+new BMapGL.Point(116.79365785078772,38.98482413572367),
+new BMapGL.Point(116.97383773887498,38.98482413572367),
+new BMapGL.Point(116.97383773887498,39.16527250385626),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle87 = new BMapGL.Polygon([
+new BMapGL.Point(116.97384973528746,39.165111014806016),
+new BMapGL.Point(116.97384973528746,38.98512012176276),
+new BMapGL.Point(117.15444515463108,38.98512012176276),
+new BMapGL.Point(117.15444515463108,39.165111014806016),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle88 = new BMapGL.Polygon([
+new BMapGL.Point(117.1544582474487,39.16540704121338),
+new BMapGL.Point(117.1544582474487,38.98519089198631),
+new BMapGL.Point(117.33458257446684,38.98519089198631),
+new BMapGL.Point(117.33458257446684,39.16540704121338),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle89 = new BMapGL.Polygon([
+new BMapGL.Point(117.33459549811604,39.16547785772134),
+new BMapGL.Point(117.33459549811604,38.98529755704084),
+new BMapGL.Point(117.51462958053345,38.98529755704084),
+new BMapGL.Point(117.51462958053345,39.16547785772134),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle90 = new BMapGL.Polygon([
+new BMapGL.Point(115.7125338279309,38.985420398315654),
+new BMapGL.Point(115.7125338279309,38.805130235607415),
+new BMapGL.Point(115.89241981574423,38.805130235607415),
+new BMapGL.Point(115.89241981574423,38.985420398315654),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle91 = new BMapGL.Polygon([
+new BMapGL.Point(115.89243050632578,38.98540926679563),
+new BMapGL.Point(115.89243050632578,38.80547758421963),
+new BMapGL.Point(116.07292972436133,38.80547758421963),
+new BMapGL.Point(116.07292972436133,38.98540926679563),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle92 = new BMapGL.Polygon([
+new BMapGL.Point(116.0729412752473,38.98575662461481),
+new BMapGL.Point(116.0729412752473,38.80523838810745),
+new BMapGL.Point(116.25287825658869,38.80523838810745),
+new BMapGL.Point(116.25287825658869,38.98575662461481),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle93 = new BMapGL.Polygon([
+new BMapGL.Point(116.25288932783282,38.98551745612915),
+new BMapGL.Point(116.25288932783282,38.805247990880254),
+new BMapGL.Point(116.43331044243274,38.805247990880254),
+new BMapGL.Point(116.43331044243274,38.98551745612915),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle94 = new BMapGL.Polygon([
+new BMapGL.Point(116.43332230736776,38.98552707946293),
+new BMapGL.Point(116.43332230736776,38.804695518696825),
+new BMapGL.Point(116.61311566406667,38.804695518696825),
+new BMapGL.Point(116.61311566406667,38.98552707946293),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle95 = new BMapGL.Polygon([
+new BMapGL.Point(116.6131267570642,38.98497465538143),
+new BMapGL.Point(116.6131267570642,38.804706502271074),
+new BMapGL.Point(116.79363387414588,38.804706502271074),
+new BMapGL.Point(116.79363387414588,38.98497465538143),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle96 = new BMapGL.Polygon([
+new BMapGL.Point(116.79364596615589,38.98498567373262),
+new BMapGL.Point(116.79364596615589,38.804544915071176),
+new BMapGL.Point(116.97382553320546,38.804544915071176),
+new BMapGL.Point(116.97382553320546,38.98498567373262),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle97 = new BMapGL.Polygon([
+new BMapGL.Point(116.97383773887498,38.98482413572367),
+new BMapGL.Point(116.97383773887498,38.804840862659425),
+new BMapGL.Point(117.15443186743225,38.804840862659425),
+new BMapGL.Point(117.15443186743225,38.98482413572367),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle98 = new BMapGL.Polygon([
+new BMapGL.Point(117.15444515463108,38.98512012176276),
+new BMapGL.Point(117.15444515463108,38.80491158650188),
+new BMapGL.Point(117.33456945535319,38.80491158650188),
+new BMapGL.Point(117.33456945535319,38.98512012176276),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle99 = new BMapGL.Polygon([
+new BMapGL.Point(117.33458257446684,38.98519089198631),
+new BMapGL.Point(117.33458257446684,38.805018211356504),
+new BMapGL.Point(117.51461689446869,38.805018211356504),
+new BMapGL.Point(117.51461689446869,38.98519089198631),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var rectangle100 = new BMapGL.Polygon([
+new BMapGL.Point(115.71252238100004,38.8051413946777),
+new BMapGL.Point(115.71252238100004,38.62487658259314),
+new BMapGL.Point(115.89240579679606,38.62487658259314),
+new BMapGL.Point(115.89240579679606,38.8051413946777),
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+ var opts0 = { position: new BMapGL.Point(115.71275109944747, 40.60754859722962),};
+var label0 = new BMapGL.Label('1个', opts0);label0.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts1 = { position: new BMapGL.Point(115.8926407241985, 40.60753765359054),};
+var label1 = new BMapGL.Label('1个', opts1);label1.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts2 = { position: new BMapGL.Point(116.07315966570059, 40.60788505514972),};
+var label2 = new BMapGL.Label('1个', opts2);label2.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts3 = { position: new BMapGL.Point(116.25310313201544, 40.60764607420915),};
+var label3 = new BMapGL.Label('0个', opts3);label3.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts4 = { position: new BMapGL.Point(116.43354351340037, 40.60765583850262),};
+var label4 = new BMapGL.Label('0个', opts4);label4.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts5 = { position: new BMapGL.Point(116.61334052489028, 40.60710378139196),};
+var label5 = new BMapGL.Label('1个', opts5);label5.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts6 = { position: new BMapGL.Point(116.79386907337938, 40.60711507353506),};
+var label6 = new BMapGL.Label('1个', opts6);label6.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts7 = { position: new BMapGL.Point(116.97406186474284, 40.6069539291049),};
+var label7 = new BMapGL.Label('4个', opts7);label7.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts8 = { position: new BMapGL.Point(117.15467953548428, 40.60725022911651),};
+var label8 = new BMapGL.Label('4个', opts8);label8.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts9 = { position: new BMapGL.Point(117.33481545832794, 40.60732136853025),};
+var label9 = new BMapGL.Label('3个', opts9);label9.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts10 = { position: new BMapGL.Point(115.71272846533512, 40.42728068051219),};
+var label10 = new BMapGL.Label('1个', opts10);label10.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts11 = { position: new BMapGL.Point(115.89261889191438, 40.42726971363354),};
+var label11 = new BMapGL.Label('1个', opts11);label11.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts12 = { position: new BMapGL.Point(116.07313690474452, 40.42761711411893),};
+var label12 = new BMapGL.Label('2个', opts12);label12.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts13 = { position: new BMapGL.Point(116.25308089966907, 40.42737810972105),};
+var label13 = new BMapGL.Label('3个', opts13);label13.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts14 = { position: new BMapGL.Point(116.43352044582252, 40.42738785990632),};
+var label14 = new BMapGL.Label('4个', opts14);label14.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts15 = { position: new BMapGL.Point(116.61331831233707, 40.42683575620203),};
+var label15 = new BMapGL.Label('14个', opts15);label15.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts16 = { position: new BMapGL.Point(116.79384580166726, 40.426847018905505),};
+var label16 = new BMapGL.Label('43个', opts16);label16.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts17 = { position: new BMapGL.Point(116.97403847762754, 40.426685828155016),};
+var label17 = new BMapGL.Label('21个', opts17);label17.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts18 = { position: new BMapGL.Point(117.15465497631743, 40.426982095216054),};
+var label18 = new BMapGL.Label('7个', opts18);label18.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts19 = { position: new BMapGL.Point(117.3347910628055, 40.42705319142151),};
+var label19 = new BMapGL.Label('2个', opts19);label19.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts20 = { position: new BMapGL.Point(115.71270030147312, 40.24704954831838),};
+var label20 = new BMapGL.Label('1个', opts20);label20.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts21 = { position: new BMapGL.Point(115.89259152370308, 40.24703856107647),};
+var label21 = new BMapGL.Label('1个', opts21);label21.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts22 = { position: new BMapGL.Point(116.07310861397328, 40.2473859625496),};
+var label22 = new BMapGL.Label('0个', opts22);label22.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts23 = { position: new BMapGL.Point(116.25305313104303, 40.24714693759822),};
+var label23 = new BMapGL.Label('44个', opts23);label23.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts24 = { position: new BMapGL.Point(116.43349184534895, 40.247156676050146),};
+var label24 = new BMapGL.Label('219个', opts24);label24.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts25 = { position: new BMapGL.Point(116.61329055693803, 40.24660452912275),};
+var label25 = new BMapGL.Label('614个', opts25);label25.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts26 = { position: new BMapGL.Point(116.7938169926642, 40.24661576488131),};
+var label26 = new BMapGL.Label('216个', opts26);label26.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts27 = { position: new BMapGL.Point(116.97400955251324, 40.24645453078456),};
+var label27 = new BMapGL.Label('67个', opts27);label27.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts28 = { position: new BMapGL.Point(117.15462488798656, 40.24675076727259),};
+var label28 = new BMapGL.Label('37个', opts28);label28.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts29 = { position: new BMapGL.Point(117.33476113761417, 40.24682182315944),};
+var label29 = new BMapGL.Label('9个', opts29);label29.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts30 = { position: new BMapGL.Point(115.71266826909518, 40.06684639708081),};
+var label30 = new BMapGL.Label('1个', opts30);label30.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts31 = { position: new BMapGL.Point(115.89256028230047, 40.066835391915546),};
+var label31 = new BMapGL.Label('1个', opts31);label31.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts32 = { position: new BMapGL.Point(116.07307645336431, 40.06718279459649),};
+var label32 = new BMapGL.Label('3个', opts32);label32.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts33 = { position: new BMapGL.Point(116.25302148778688, 40.06694375162274),};
+var label33 = new BMapGL.Label('242个', opts33);label33.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts34 = { position: new BMapGL.Point(116.43345937225544, 40.06695347934522),};
+var label34 = new BMapGL.Label('1615个', opts34);label34.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts35 = { position: new BMapGL.Point(116.61325892255392, 40.06640129283167),};
+var label35 = new BMapGL.Label('1504个', opts35);label35.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts36 = { position: new BMapGL.Point(116.79378430891035, 40.06641250279837),};
+var label36 = new BMapGL.Label('206个', opts36);label36.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts37 = { position: new BMapGL.Point(116.9739767530076, 40.066251227775446),};
+var label37 = new BMapGL.Label('9个', opts37);label37.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts38 = { position: new BMapGL.Point(117.154590931945, 40.06654743446062),};
+var label38 = new BMapGL.Label('5个', opts38);label38.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts39 = { position: new BMapGL.Point(117.33472734506151, 40.06661845229661),};
+var label39 = new BMapGL.Label('0个', opts39);label39.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts40 = { position: new BMapGL.Point(115.71263529351612, 39.886654645841006),};
+var label40 = new BMapGL.Label('1个', opts40);label40.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts41 = { position: new BMapGL.Point(115.89252809419773, 39.88664362397196),};
+var label41 = new BMapGL.Label('1个', opts41);label41.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts42 = { position: new BMapGL.Point(116.0730433482456, 39.886991026146774),};
+var label42 = new BMapGL.Label('31个', opts42);label42.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts43 = { position: new BMapGL.Point(116.25298889647374, 39.88675196649548),};
+var label43 = new BMapGL.Label('152个', opts43);label43.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts44 = { position: new BMapGL.Point(116.43342595268105, 39.886761682798856),};
+var label44 = new BMapGL.Label('1124个', opts44);label44.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts45 = { position: new BMapGL.Point(116.61322633759197, 39.88620945947711),};
+var label45 = new BMapGL.Label('886个', opts45);label45.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts46 = { position: new BMapGL.Point(116.79375067839646, 39.886220643130784),};
+var label46 = new BMapGL.Label('81个', opts46);label46.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts47 = { position: new BMapGL.Point(116.97394300799448, 39.886059328331825),};
+var label47 = new BMapGL.Label('34个', opts47);label47.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts48 = { position: new BMapGL.Point(117.15455603621697, 39.8863555041828),};
+var label48 = new BMapGL.Label('1个', opts48);label48.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts49 = { position: new BMapGL.Point(117.33469261396814, 39.88642648494017),};
+var label49 = new BMapGL.Label('0个', opts49);label49.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts50 = { position: new BMapGL.Point(115.7126046528121, 39.706455396210906),};
+var label50 = new BMapGL.Label('2个', opts50);label50.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts51 = { position: new BMapGL.Point(115.89249823797054, 39.70644435723833),};
+var label51 = new BMapGL.Label('2个', opts51);label51.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts52 = { position: new BMapGL.Point(116.07301257795727, 39.70679175576641),};
+var label52 = new BMapGL.Label('22个', opts52);label52.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts53 = { position: new BMapGL.Point(116.25295863689136, 39.70655267915724),};
+var label53 = new BMapGL.Label('23个', opts53);label53.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts54 = { position: new BMapGL.Point(116.43339486703634, 39.70656238186307),};
+var label54 = new BMapGL.Label('28个', opts54);label54.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts55 = { position: new BMapGL.Point(116.6131960827393, 39.70601012280237),};
+var label55 = new BMapGL.Label('39个', opts55);label55.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts56 = { position: new BMapGL.Point(116.79371938240249, 39.7060212781361),};
+var label56 = new BMapGL.Label('13个', opts56);label56.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts57 = { position: new BMapGL.Point(116.97391159919212, 39.705859923124336),};
+var label57 = new BMapGL.Label('3个', opts57);label57.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts58 = { position: new BMapGL.Point(117.15452348318676, 39.706156065673305),};
+var label58 = new BMapGL.Label('0个', opts58);label58.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts59 = { position: new BMapGL.Point(117.33466022720562, 39.706227008761985),};
+var label59 = new BMapGL.Label('0个', opts59);label59.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts60 = { position: new BMapGL.Point(115.71257895714905, 39.52623355066027),};
+var label60 = new BMapGL.Label('0个', opts60);label60.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts61 = { position: new BMapGL.Point(115.89247332346866, 39.52622249267189),};
+var label61 = new BMapGL.Label('0个', opts61);label61.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts62 = { position: new BMapGL.Point(116.07298675477881, 39.526569883931856),};
+var label62 = new BMapGL.Label('1个', opts62);label62.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts63 = { position: new BMapGL.Point(116.25293332084833, 39.52633078852822),};
+var label63 = new BMapGL.Label('0个', opts63);label63.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts64 = { position: new BMapGL.Point(116.4333687286013, 39.52634047463417),};
+var label64 = new BMapGL.Label('5个', opts64);label64.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts65 = { position: new BMapGL.Point(116.61317076950601, 39.52578817888207),};
+var label65 = new BMapGL.Label('0个', opts65);label65.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts66 = { position: new BMapGL.Point(116.7936930338351, 39.52579930305064),};
+var label66 = new BMapGL.Label('1个', opts66);label66.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts67 = { position: new BMapGL.Point(116.97388513935489, 39.5256379059798),};
+var label67 = new BMapGL.Label('0个', opts67);label67.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts68 = { position: new BMapGL.Point(117.15449588756077, 39.525934012129504),};
+var label68 = new BMapGL.Label('0个', opts68);label68.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts69 = { position: new BMapGL.Point(117.33463279950548, 39.526004915616554),};
+var label69 = new BMapGL.Label('0个', opts69);label69.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts70 = { position: new BMapGL.Point(115.71255933339049, 39.34598267159122),};
+var label70 = new BMapGL.Label('1个', opts70);label70.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts71 = { position: new BMapGL.Point(115.89245447654044, 39.34597159173896),};
+var label71 = new BMapGL.Label('1个', opts71);label71.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts72 = { position: new BMapGL.Point(116.07296700787613, 39.346318972718365),};
+var label72 = new BMapGL.Label('1个', opts72);label72.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts73 = { position: new BMapGL.Point(116.25291407628734, 39.346079855680195),};
+var label73 = new BMapGL.Label('2个', opts73);label73.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts74 = { position: new BMapGL.Point(116.4333486671691, 39.34608952227701),};
+var label74 = new BMapGL.Label('1个', opts74);label74.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts75 = { position: new BMapGL.Point(116.61315152445135, 39.34553718717714),};
+var label75 = new BMapGL.Label('0个', opts75);label75.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts76 = { position: new BMapGL.Point(116.79367276100112, 39.34554827740071),};
+var label76 = new BMapGL.Label('0个', opts76);label76.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts77 = { position: new BMapGL.Point(116.973864756096, 39.34538683562922),};
+var label77 = new BMapGL.Label('1个', opts77);label77.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts78 = { position: new BMapGL.Point(117.15447437955352, 39.345682902650076),};
+var label78 = new BMapGL.Label('1个', opts78);label78.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts79 = { position: new BMapGL.Point(117.3346114606385, 39.34575376389523),};
+var label79 = new BMapGL.Label('0个', opts79);label79.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts80 = { position: new BMapGL.Point(115.712545068702, 39.165707059315814),};
+var label80 = new BMapGL.Label('1个', opts80);label80.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts81 = { position: new BMapGL.Point(115.8924409829734, 39.165695954681645),};
+var label81 = new BMapGL.Label('1个', opts81);label81.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts82 = { position: new BMapGL.Point(116.07295262618746, 39.16604332387199),};
+var label82 = new BMapGL.Label('1个', opts82);label82.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts83 = { position: new BMapGL.Point(116.25290019057361, 39.16580418221883),};
+var label83 = new BMapGL.Label('2个', opts83);label83.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts84 = { position: new BMapGL.Point(116.43333397174668, 39.16581382737417),};
+var label84 = new BMapGL.Label('1个', opts84);label84.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts85 = { position: new BMapGL.Point(116.61313763292611, 39.16526144941329),};
+var label85 = new BMapGL.Label('0个', opts85);label85.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts86 = { position: new BMapGL.Point(116.79365785078772, 39.16527250385626),};
+var label86 = new BMapGL.Label('0个', opts86);label86.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts87 = { position: new BMapGL.Point(116.97384973528746, 39.165111014806016),};
+var label87 = new BMapGL.Label('0个', opts87);label87.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts88 = { position: new BMapGL.Point(117.1544582474487, 39.16540704121338),};
+var label88 = new BMapGL.Label('0个', opts88);label88.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts89 = { position: new BMapGL.Point(117.33459549811604, 39.16547785772134),};
+var label89 = new BMapGL.Label('0个', opts89);label89.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts90 = { position: new BMapGL.Point(115.7125338279309, 38.985420398315654),};
+var label90 = new BMapGL.Label('0个', opts90);label90.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts91 = { position: new BMapGL.Point(115.89243050632578, 38.98540926679563),};
+var label91 = new BMapGL.Label('0个', opts91);label91.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts92 = { position: new BMapGL.Point(116.0729412752473, 38.98575662461481),};
+var label92 = new BMapGL.Label('0个', opts92);label92.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts93 = { position: new BMapGL.Point(116.25288932783282, 38.98551745612915),};
+var label93 = new BMapGL.Label('1个', opts93);label93.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts94 = { position: new BMapGL.Point(116.43332230736776, 38.98552707946293),};
+var label94 = new BMapGL.Label('0个', opts94);label94.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts95 = { position: new BMapGL.Point(116.6131267570642, 38.98497465538143),};
+var label95 = new BMapGL.Label('0个', opts95);label95.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts96 = { position: new BMapGL.Point(116.79364596615589, 38.98498567373262),};
+var label96 = new BMapGL.Label('0个', opts96);label96.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts97 = { position: new BMapGL.Point(116.97383773887498, 38.98482413572367),};
+var label97 = new BMapGL.Label('0个', opts97);label97.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts98 = { position: new BMapGL.Point(117.15444515463108, 38.98512012176276),};
+var label98 = new BMapGL.Label('0个', opts98);label98.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts99 = { position: new BMapGL.Point(117.33458257446684, 38.98519089198631),};
+var label99 = new BMapGL.Label('0个', opts99);label99.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+var opts100 = { position: new BMapGL.Point(115.71252238100004, 38.8051413946777),};
+var label100 = new BMapGL.Label('0个', opts100);label100.setStyle({color: 'blue',borderRadius: '5px', borderColor: '#ccc', padding: '10px',fontSize: '16px',height: '30px',lineHeight: '30px',fontFamily: '微软雅黑'});
+function add_overlay() {
+map.addOverlay(rectangle0);
+map.addOverlay(rectangle1);
+map.addOverlay(rectangle2);
+map.addOverlay(rectangle3);
+map.addOverlay(rectangle4);
+map.addOverlay(rectangle5);
+map.addOverlay(rectangle6);
+map.addOverlay(rectangle7);
+map.addOverlay(rectangle8);
+map.addOverlay(rectangle9);
+map.addOverlay(rectangle10);
+map.addOverlay(rectangle11);
+map.addOverlay(rectangle12);
+map.addOverlay(rectangle13);
+map.addOverlay(rectangle14);
+map.addOverlay(rectangle15);
+map.addOverlay(rectangle16);
+map.addOverlay(rectangle17);
+map.addOverlay(rectangle18);
+map.addOverlay(rectangle19);
+map.addOverlay(rectangle20);
+map.addOverlay(rectangle21);
+map.addOverlay(rectangle22);
+map.addOverlay(rectangle23);
+map.addOverlay(rectangle24);
+map.addOverlay(rectangle25);
+map.addOverlay(rectangle26);
+map.addOverlay(rectangle27);
+map.addOverlay(rectangle28);
+map.addOverlay(rectangle29);
+map.addOverlay(rectangle30);
+map.addOverlay(rectangle31);
+map.addOverlay(rectangle32);
+map.addOverlay(rectangle33);
+map.addOverlay(rectangle34);
+map.addOverlay(rectangle35);
+map.addOverlay(rectangle36);
+map.addOverlay(rectangle37);
+map.addOverlay(rectangle38);
+map.addOverlay(rectangle39);
+map.addOverlay(rectangle40);
+map.addOverlay(rectangle41);
+map.addOverlay(rectangle42);
+map.addOverlay(rectangle43);
+map.addOverlay(rectangle44);
+map.addOverlay(rectangle45);
+map.addOverlay(rectangle46);
+map.addOverlay(rectangle47);
+map.addOverlay(rectangle48);
+map.addOverlay(rectangle49);
+map.addOverlay(rectangle50);
+map.addOverlay(rectangle51);
+map.addOverlay(rectangle52);
+map.addOverlay(rectangle53);
+map.addOverlay(rectangle54);
+map.addOverlay(rectangle55);
+map.addOverlay(rectangle56);
+map.addOverlay(rectangle57);
+map.addOverlay(rectangle58);
+map.addOverlay(rectangle59);
+map.addOverlay(rectangle60);
+map.addOverlay(rectangle61);
+map.addOverlay(rectangle62);
+map.addOverlay(rectangle63);
+map.addOverlay(rectangle64);
+map.addOverlay(rectangle65);
+map.addOverlay(rectangle66);
+map.addOverlay(rectangle67);
+map.addOverlay(rectangle68);
+map.addOverlay(rectangle69);
+map.addOverlay(rectangle70);
+map.addOverlay(rectangle71);
+map.addOverlay(rectangle72);
+map.addOverlay(rectangle73);
+map.addOverlay(rectangle74);
+map.addOverlay(rectangle75);
+map.addOverlay(rectangle76);
+map.addOverlay(rectangle77);
+map.addOverlay(rectangle78);
+map.addOverlay(rectangle79);
+map.addOverlay(rectangle80);
+map.addOverlay(rectangle81);
+map.addOverlay(rectangle82);
+map.addOverlay(rectangle83);
+map.addOverlay(rectangle84);
+map.addOverlay(rectangle85);
+map.addOverlay(rectangle86);
+map.addOverlay(rectangle87);
+map.addOverlay(rectangle88);
+map.addOverlay(rectangle89);
+map.addOverlay(rectangle90);
+map.addOverlay(rectangle91);
+map.addOverlay(rectangle92);
+map.addOverlay(rectangle93);
+map.addOverlay(rectangle94);
+map.addOverlay(rectangle95);
+map.addOverlay(rectangle96);
+map.addOverlay(rectangle97);
+map.addOverlay(rectangle98);
+map.addOverlay(rectangle99);
+map.addOverlay(rectangle100);
+map.addOverlay(label0);
+map.addOverlay(label1);
+map.addOverlay(label2);
+map.addOverlay(label3);
+map.addOverlay(label4);
+map.addOverlay(label5);
+map.addOverlay(label6);
+map.addOverlay(label7);
+map.addOverlay(label8);
+map.addOverlay(label9);
+map.addOverlay(label10);
+map.addOverlay(label11);
+map.addOverlay(label12);
+map.addOverlay(label13);
+map.addOverlay(label14);
+map.addOverlay(label15);
+map.addOverlay(label16);
+map.addOverlay(label17);
+map.addOverlay(label18);
+map.addOverlay(label19);
+map.addOverlay(label20);
+map.addOverlay(label21);
+map.addOverlay(label22);
+map.addOverlay(label23);
+map.addOverlay(label24);
+map.addOverlay(label25);
+map.addOverlay(label26);
+map.addOverlay(label27);
+map.addOverlay(label28);
+map.addOverlay(label29);
+map.addOverlay(label30);
+map.addOverlay(label31);
+map.addOverlay(label32);
+map.addOverlay(label33);
+map.addOverlay(label34);
+map.addOverlay(label35);
+map.addOverlay(label36);
+map.addOverlay(label37);
+map.addOverlay(label38);
+map.addOverlay(label39);
+map.addOverlay(label40);
+map.addOverlay(label41);
+map.addOverlay(label42);
+map.addOverlay(label43);
+map.addOverlay(label44);
+map.addOverlay(label45);
+map.addOverlay(label46);
+map.addOverlay(label47);
+map.addOverlay(label48);
+map.addOverlay(label49);
+map.addOverlay(label50);
+map.addOverlay(label51);
+map.addOverlay(label52);
+map.addOverlay(label53);
+map.addOverlay(label54);
+map.addOverlay(label55);
+map.addOverlay(label56);
+map.addOverlay(label57);
+map.addOverlay(label58);
+map.addOverlay(label59);
+map.addOverlay(label60);
+map.addOverlay(label61);
+map.addOverlay(label62);
+map.addOverlay(label63);
+map.addOverlay(label64);
+map.addOverlay(label65);
+map.addOverlay(label66);
+map.addOverlay(label67);
+map.addOverlay(label68);
+map.addOverlay(label69);
+map.addOverlay(label70);
+map.addOverlay(label71);
+map.addOverlay(label72);
+map.addOverlay(label73);
+map.addOverlay(label74);
+map.addOverlay(label75);
+map.addOverlay(label76);
+map.addOverlay(label77);
+map.addOverlay(label78);
+map.addOverlay(label79);
+map.addOverlay(label80);
+map.addOverlay(label81);
+map.addOverlay(label82);
+map.addOverlay(label83);
+map.addOverlay(label84);
+map.addOverlay(label85);
+map.addOverlay(label86);
+map.addOverlay(label87);
+map.addOverlay(label88);
+map.addOverlay(label89);
+map.addOverlay(label90);
+map.addOverlay(label91);
+map.addOverlay(label92);
+map.addOverlay(label93);
+map.addOverlay(label94);
+map.addOverlay(label95);
+map.addOverlay(label96);
+map.addOverlay(label97);
+map.addOverlay(label98);
+map.addOverlay(label99);
+map.addOverlay(label100);
+} 
+add_overlay();
+</script>
